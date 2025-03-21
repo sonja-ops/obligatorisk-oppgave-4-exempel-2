@@ -28,6 +28,32 @@ convertButton.addEventListener("click", function () {
 
 const addTodo = document.querySelector("#addTodo");
 
-addTodo.addEventListener("click", function () {
+addTodo.addEventListener("click", function (avent) {
+  avent.preventDefault();
   console.log("Knappen er trykket!");
+
+  const userInput = document.querySelector("#userInput").value;
+  console.log(userInput);
+
+  const todoList = document.querySelector("#todoList");
+  const todoItem = document.createElement("li");
+
+  todoItem.textContent = userInput;
+
+  todoList.appendChild(todoItem);
+
+  document.querySelector("#userInput").value = "";
 });
+  
+  
+  
+
+
+
+
+
+ 
+
+
+
+   
